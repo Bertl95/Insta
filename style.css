@@ -1,0 +1,461 @@
+body {
+    scroll-behavior: smooth;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1ea1f6;
+}
+
+img {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0 0 0);
+}
+
+/* -------------  HEADER   ------------- */
+header {
+    background-color: #fff;
+    background-color: rgba(var(--d87, 255, 255, 255), 1);
+    position: sticky;
+    top: 0;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    padding: 0 20px;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+}
+
+.header-profile {
+    min-height: 24px;
+    max-height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    border-radius: 100%;
+
+}
+
+.header-icons {
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.instagram a {
+    font-family: 'Comforter', cursive;
+    color: #272324;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.searchbar-wrap {
+    display: flex;
+}
+
+.searchbar {
+    border: 1px grey;
+    border-radius: 4px;
+    height: 35px;
+    padding: 2px 60px 2px 20px;
+    background-color: #f5f5f5;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #262626;
+}
+
+/* ------------     MAIN SECTION ------------- */
+main {
+    background-color: #fafafa;
+    background-color: rgba(var(--b3f, 250, 250, 250), 1);
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.content {
+    display: block;
+    min-width: 600px;
+    max-width: 614px;
+    min-height: 118px;
+}
+
+.story-container {
+    background: #fff;
+    background: rgba(var(--d87, 255, 255, 255), 1);
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    border-radius: 3px;
+    padding: 16px 8px;
+    margin: 0px 12px;
+    display: flex;
+    overflow-y: auto;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #737272;
+    border: 1px solid #000;
+}
+
+.story-container::-webkit-scrollbar-track {
+    padding: 2px 0;
+    background-color: #404040;
+}
+
+.story-container::-webkit-scrollbar {
+    height: 14px;
+    width: 1px;
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 8px;
+}
+
+.story:hover {
+    cursor: pointer;
+}
+
+.story span {
+    padding-top: 8px;
+}
+
+.story-profile {
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    border: 3px solid rgb(223 61 119);
+}
+
+/* --------- HEAD + BODY OF POST ------ */
+
+.post-wrap {
+    padding-top: 30px;
+    margin: 0px 12px;
+    position: relative;
+}
+
+.post-container {
+    padding-bottom: 30px
+}
+
+.post-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.author {
+    max-width: calc(100% - 48px);
+    padding: 14px 4px 14px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.author span {
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.post-options img {
+    cursor: pointer;
+    padding-right: 16px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* ----- FOOT OF POST  ---- */
+
+.post-foot-wrap {
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.comment-share-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 16px 8px;
+}
+
+.comment-share-container img {
+    cursor: pointer;
+    padding-right: 16px;
+}
+
+.save img {
+    padding-right: 0px;
+}
+
+.liked-by img {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.liked-by {
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.liked-by span {
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.description-comments-container {
+    padding: 0px 16px;
+    font-size: 14px;
+}
+
+.description-comments-container a {
+    color: #404040;
+}
+
+
+.all-comments {
+    margin: 8px 0px;
+    font-size: 14px;
+}
+
+.timestamp {
+    margin-bottom: 16px;
+    padding: 0px 16px;
+    font-size: 10px;
+}
+
+.comment-textfield-container {
+    border-top: 1px solid #dbdbdb;
+    border-top: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    padding: 6px 16px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-textfield img {
+    padding: 8px 16px 8px 0;
+}
+
+.comment-textfield {
+    display: flex;
+    align-items: center;
+}
+
+.comment-textfield-container button {
+    border: none;
+    color: #1ea1f6;
+    background-color: #fafafa;
+    opacity: 60%;
+}
+
+.comment-textfield-container button:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.comment-textfield-container input {
+    border: none;
+    font-size: 14px;
+    padding: 8px 8px;
+    background-color: #fafafa;
+    width: 27rem;
+}
+
+.comment-textfield-container input:focus {
+    border: 0;
+}
+
+.more, .all-comments, .timestamp,
+.comment-textfield input {
+    opacity: 60%;
+}
+.delBtn {
+    border: 0;
+    background-color: #fafafa;
+    color: #1ea1f6;
+    opacity: 60%;
+    position: absolute;
+    right: 16px;
+}
+.delBtn:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+/* -----------------  SIDEBAR/ASIDE ------------ */
+.sidebar {
+    display: block;
+    margin-left: 8px;
+}
+.sidebar-container{
+    position: sticky;
+    top: 60px;
+}
+
+.sidebar span {
+    font-size: 12px;
+    color: rgb(156 156 156);
+}
+
+.sidebar a {
+    color: #1ea1f6;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.user-profile-pic {
+    margin-right: 16px;
+    max-width: 56px;
+    border-radius: 100%;
+    border: 3px solid rgb(223 61 119);
+}
+
+.user-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+}
+
+.side-username {
+    margin-right: 90px;
+}
+
+.suggestions-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.suggestions {
+    padding-right: 56px;
+}
+
+.suggestions p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(156 156 156);
+}
+
+.see-all {
+    text-align: center;
+}
+
+.see-all p {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(81 81 81);
+}
+
+.see-all p:hover {
+    cursor: pointer;
+}
+
+.suggested-wrap {
+    padding-bottom: 8px;
+}
+
+.suggested-container {
+    display: flex;
+    padding: 8px 0px;
+    align-items: center;
+}
+
+.suggested-pic {
+    padding-right: 12px;
+}
+
+.suggested-pic img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.suggested-user-container {
+    min-width: 150px;
+}
+
+.suggested-username {
+    padding-bottom: 4px;
+}
+
+.suggested-username span {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0 0 0);
+}
+
+.suggested-follow a {
+    margin-left: 36px;
+}
+
+/*  -------- IMPRINT/LINKS -----*/
+
+.links a {
+    font-size: 14px;
+    color: #c7c7c7;
+}
+
+.links a:hover {
+    cursor: pointer;
+}
+
+.links {
+    padding-top: 16px;
+}
+
+.copyright span {
+    font-size: 12px;
+    color: #c7c7c7
+}
+
+.copyright {
+    padding-top: 16px;
+    padding-bottom: 30px;
+}

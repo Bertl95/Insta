@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram (Kappa)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="helpscripts.js"></script>
+</head>
+<body id="body" onload="render()">
+<header>
+    <div class="header-container">
+        <div class="instagram"> 
+            <a href="#">Instagram</a>
+        </div>
+        <div class="searchbar-wrap hide-mobile640">
+            <input onkeypress="search()" type="text" id="search" placeholder="Suchen..." class="searchbar">
+            
+        </div>
+        <div class="header-images">
+           <img src="img/home_black_24dp.svg" class="header-icons" id="header-icons">
+           <img src="img/send_black_24dp.svg" class="header-icons" id="header-icons">
+           <img src="img/add_circle_outline_black_24dp.svg" class="header-icons" id="header-icons">
+           <img src="img/explore_black_24dp.svg" class="header-icons" id="header-icons">
+           <img src="img/favorite_border_black_24dp.svg" class="header-icons" id="header-icons">
+           <img src="img/myProfil.jpg" class="header-profile" id="header-profile">
+        </div>
+    </div>
+</header>
+<main>
+    <div class="content" id="content">
+
+            <div class="story-container" id="story-container">
+            </div>
+    
+            <div class="post-wrap" id="post-wrap">
+            </div>
+    </div>        
+    
+    <aside class="sidebar hide-mobile" id="sidebar">
+        <div class="sidebar-container">
+          <div class="user-sidebar">
+
+            <div class="user-profile">
+                <img src="img/myProfil.jpg" class="user-profile-pic">
+            </div>
+            <div>
+               <div id="username" class="side-username">
+                  <h2>PZ_RS3</h2>
+               </div>
+               <div>
+                  <span>PaZi</span>
+               </div>
+            </div>
+            <div>
+                <a href="#">Wechseln</a>
+            </div>
+        </div>
+
+        <div class="suggestions-container">
+          <div class="suggestions">
+             <p>Vorschläge für dich</p>
+          </div>
+          <div class="see-all">
+             <p>Alle Ansehen</p>
+          </div>
+        </div>
+
+        <div class="suggested-wrap" id="suggested-wrap">
+        </div>
+
+        
+            <div class="links">
+                <a href="#">Info •</a>
+                <a href="#">Hilfe •</a>
+                <a href="#">Presse •</a>
+                <a href="#">API •</a>
+                <a href="#">Jobs •</a>
+                <a href="#">Datenrichtlinie •</a> <br>
+                <a href="#">Impressum/Nutzungsbedingungen<br>NetzDG/UrhDaG •</a>
+                <a href="#">Standorte •</a> <br>
+                <a href="#">Top-Konten •</a>
+                <a href="#">Hashtags •</a>
+                <a href="#">Sprache</a>
+            </div>
+
+             <div class="copyright">
+                <span>© 2022 INSTAGRAM FROM PAZI</span>
+            </div>
+       </div>
+    </aside>
+
+</main>
+    
+
+    
+</body>
+</html>
