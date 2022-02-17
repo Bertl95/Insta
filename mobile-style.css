@@ -64,6 +64,6 @@
         margin: 0 !important;
     }
     .comment-textfield-container input {        
-        width: 100px !important;
+        width: 60vw !important;
     }
 }
