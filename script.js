@@ -1,9 +1,13 @@
-
-
 function render(){
+    load();
     renderStories();
     renderSuggested();
     renderPosts();
+    
+}
+function load(){
+    for (let i = 0; i < posts.length; i++)
+    loadComments(i);
 }
 function renderStories(){
     getById('story-container').innerHTML = ``;
@@ -105,7 +109,7 @@ function renderPosts(){
         </div>
         </div>
         `;
-        loadComments(i);
+        
         for (let j = 0; j < posts[i].comments.length; j++) {
             
             const comment = posts[i].comments[j];
@@ -116,29 +120,10 @@ function renderPosts(){
             </span> 
             <button onclick="delComment(${j}, ${i})" class="delBtn"> Löschen </button>
             <br>
-            `;
-            
-                    
+            `;                                
         }    
-    }  
-    ;
-}
-/*function renderComments(){
-    for (let i = 0; i < posts[i].comments.length; i++) {
-        loadComments(i);
-        const comment = posts[i].comments[j];
-            getById(`comments-${i}`).innerHTML += `
-            <span>
-            <b>${comment['username']}</b> 
-            ${comment['comment']}
-            </span> 
-            <button onclick="delComment(${j}, ${i})" class="delBtn"> Löschen </button>
-            <br>
-            `;   
-        
     }
-    
-}*/
+}
 function addComment(postIndex){
     let comment = getById('comment-text' + postIndex);
     posts[postIndex].comments.push({username:'PZ_RS3', comment: comment.value});
@@ -156,7 +141,7 @@ function saveComments(postIndex){
 }
 function loadComments(postIndex){
     let commentsAsText = localStorage.getItem('comments' + postIndex);
-    console.log(JSON.parse(commentsAsText));
-    
+    if (commentsAsText) {
+        posts[postIndex].comments = JSON.parse(commentsAsText);
+    }    
 }   
-/*posts[postIndex].comments = JSON.parse(commentsAsText);*/
