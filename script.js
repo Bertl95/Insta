@@ -1,153 +1,4 @@
-let stories = [
-    {        
-        'profile-image': 'img/profil1.jpg',
-        'username': 'hyMedia'
-    },
-    {        
-        'profile-image': 'img/profil2.jpg',
-        'username': 'TimoSa'
-    },
-    {        
-        'profile-image': 'img/profil3.jpg',
-        'username': 'WernerSo'
-    },
-    {        
-        'profile-image': 'img/profil4.jpg',
-        'username': 'ManfredMo'
-    },
-    {        
-        'profile-image': 'img/profil5.jpg',
-        'username': 'MichaelDi'
-    },
-    {        
-        'profile-image': 'img/profil6.jpg',
-        'username': 'AlbertMi'
-    },
-    {        
-        'profile-image': 'img/profil7.jpg',
-        'username': 'FranzDo'
-    },
-    {        
-        'profile-image': 'img/profil1.jpg',
-        'username': 'ManuelSei'
-    }
-]
-let suggestedUsers = [
-    {
-               
-        'profile-image': 'img/profil7.jpg',
-        'username': 'SebastianDo',
-        'description': 'Folgt dir'
-    
-    },
-    {
-               
-        'profile-image': 'img/profil6.jpg',
-        'username': 'SanniKo',
-        'description': 'Folgt dir'
-    
-    },
-    {
-               
-        'profile-image': 'img/profil5.jpg',
-        'username': 'AlexJo',
-        'description': 'Folgt dir'
-    
-    },
-    {
-               
-        'profile-image': 'img/profil4.jpg',
-        'username': 'SeebubDo',
-        'description': 'Folgt dir'
-    
-    },
-    {
-               
-        'profile-image': 'img/profil3.jpg',
-        'username': 'MarkusMo',
-        'description': 'Folgt dir'
-    
-    },
-]
-let posts = [
-    {        
-        'profile-image': 'img/profil3.jpg',
-        'username': 'MarkusMo',
-        'postimage': 'img/post1.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil1.jpg',
-        'liked-by-user': 'hubiDu',
-        'liked-by-amount': 187,
-        'timestamp':'VOR 20 STUNDEN',
-        'comments' : []       
-    },
-    {        
-        'profile-image': 'img/profil6.jpg',
-        'username': 'SebiDo',
-        'postimage': 'img/post2.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil2.jpg',
-        'liked-by-user': 'hansiDu',
-        'liked-by-amount': 1337,
-        'timestamp':'VOR 10 STUNDEN',
-        'comments' : []        
-    },
-    {        
-        'profile-image': 'img/profil1.jpg',
-        'username': 'SanniWi',
-        'postimage': 'img/post3.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil3.jpg',
-        'liked-by-user': 'arminSo',
-        'liked-by-amount': 187,
-        'timestamp':'VOR 22 STUNDEN',
-        'comments' : []        
-    },
-    {        
-        'profile-image': 'img/profil4.jpg',
-        'username': 'karlWeb',
-        'postimage': 'img/post4.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil1.jpg',
-        'liked-by-user': 'hubiDu',
-        'liked-by-amount': 1337,
-        'timestamp':'VOR 12 STUNDEN',
-        'comments' : []        
-    },
-    {        
-        'profile-image': 'img/profil5.jpg',
-        'username': 'saveSea',
-        'postimage': 'img/post5.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil4.jpg',
-        'liked-by-user': 'TobiSa',
-        'liked-by-amount': 187,
-        'timestamp':'VOR 14 STUNDEN',
-        'comments' : []        
-    },
-    {        
-        'profile-image': 'img/profil6.jpg',
-        'username': 'martinMu',
-        'postimage': 'img/post6.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil1.jpg',
-        'liked-by-user': 'hubiDu',
-        'liked-by-amount': 1337,
-        'timestamp':'VOR 15 STUNDEN',
-        'comments' : []        
-    },
-    {        
-        'profile-image': 'img/post1.jpg',
-        'username': 'klausKo',
-        'postimage': 'img/post7.jpg',
-        'post-description': 'Hier ein Bild aus meinem Urlaub',
-        'liked-by-image': 'img/profil1.jpg',
-        'liked-by-user': 'hubiDu',
-        'liked-by-amount': 187,
-        'timestamp':'VOR 16 STUNDEN',
-        'comments' : []        
-    }
-]
+
 
 function render(){
     renderStories();
@@ -244,9 +95,9 @@ function renderPosts(){
             <div class="timestamp">
                 <span> ${post['timestamp']} </span>
             </div>
-            <div class="comment-textfield-container hide-mobile640">
+            <div class="comment-textfield-container ">
                 <div class="comment-textfield">
-                <img src="img/sentiment_satisfied_black_24dp.svg">
+                <img class="hide-mobile640" src="img/sentiment_satisfied_black_24dp.svg">
                 <input id="comment-text${i}" type="text" placeholder="Kommentieren ...">
                 </div>
                 <button onclick="addComment(${i})">Posten</button>
@@ -254,9 +105,9 @@ function renderPosts(){
         </div>
         </div>
         `;
-
+        loadComments(i);
         for (let j = 0; j < posts[i].comments.length; j++) {
-            console.log('Hello for comments')
+            
             const comment = posts[i].comments[j];
             getById(`comments-${i}`).innerHTML += `
             <span>
@@ -266,19 +117,46 @@ function renderPosts(){
             <button onclick="delComment(${j}, ${i})" class="delBtn"> Löschen </button>
             <br>
             `;
-    }
-  }
+            
+                    
+        }    
+    }  
+    ;
 }
+/*function renderComments(){
+    for (let i = 0; i < posts[i].comments.length; i++) {
+        loadComments(i);
+        const comment = posts[i].comments[j];
+            getById(`comments-${i}`).innerHTML += `
+            <span>
+            <b>${comment['username']}</b> 
+            ${comment['comment']}
+            </span> 
+            <button onclick="delComment(${j}, ${i})" class="delBtn"> Löschen </button>
+            <br>
+            `;   
+        
+    }
+    
+}*/
 function addComment(postIndex){
     let comment = getById('comment-text' + postIndex);
     posts[postIndex].comments.push({username:'PZ_RS3', comment: comment.value});
+    saveComments(postIndex)
     renderPosts();
 }
 function delComment(commentIndex, postIndex){
     posts[postIndex].comments.splice(commentIndex, 1);
+    saveComments(postIndex)
     renderPosts();
 }
-function saveToLocalStorage(){
-    let commentAsText = JSON.stringify(posts['comments'][i])
-    posts
+function saveComments(postIndex){
+    let commentsAsText = JSON.stringify(posts[postIndex]['comments']);
+    localStorage.setItem ('comments' + postIndex, commentsAsText);
 }
+function loadComments(postIndex){
+    let commentsAsText = localStorage.getItem('comments' + postIndex);
+    console.log(JSON.parse(commentsAsText));
+    
+}   
+/*posts[postIndex].comments = JSON.parse(commentsAsText);*/

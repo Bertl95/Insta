@@ -6,6 +6,9 @@
     .content {
         max-width: 600px;
     }
+    .comment-textfield-container input {        
+        width: 15rem;
+    }
 }
 
 @media(max-width: 640px) {
@@ -59,5 +62,8 @@
 
     .post-wrap {
         margin: 0 !important;
+    }
+    .comment-textfield-container input {        
+        width: 100px !important;
     }
 }
